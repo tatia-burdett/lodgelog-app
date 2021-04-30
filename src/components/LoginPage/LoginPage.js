@@ -6,7 +6,15 @@ class LoginPage extends React.Component {
   render () {
     return (
       <div>
-        Login!
+        <form>
+          <label>Username</label>
+          <input />
+          <label>Password</label>
+          <input />
+          <button>
+            Login
+          </button>
+        </form>
         <Link to='/sign-up'>Sign Up!</Link>
       </div>
     )
