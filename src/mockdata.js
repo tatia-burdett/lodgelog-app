@@ -1,5 +1,7 @@
 const data = [
   {
+    id: 1,
+    year: '2021',
     street_address: '123 Sycamore Dr',
     unit: '15',
     city: 'Madison',
@@ -8,14 +10,18 @@ const data = [
     current: true
   },
   {
+    id: 2,
+    year: '2020',
     street_address: '637 Diamond St',
-    unit: '',
+    unit: null,
     city: 'Lubbock',
     state: 'TX',
     zipcode: '79382',
     current: false
   },
   {
+    id: 3,
+    year: '2020',
     street_address: '2359 32nd St',
     unit: '1120',
     city: 'Fort Wayne',
@@ -24,8 +30,10 @@ const data = [
     current: false
   },
   {
+    id: 4,
+    year: '2017',
     street_address: '88 Highland Ave',
-    unit: '',
+    unit: null,
     city: 'Jacksonville',
     state: 'FL',
     zipcode: '32034',

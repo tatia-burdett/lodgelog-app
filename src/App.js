@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router-dom'
 import './App.css'
+import AddressContext from './AddressContext'
 
 import data from './mockdata'
 
@@ -43,20 +44,24 @@ renderRoutes () {
 }
 
   render () {
-    console.log(data)
-
+    const value = {
+      data: data
+    }
+  
     return (
-      <div>
-        <nav>
-          <NavBar />
-        </nav>
-        <main>
-          {this.renderRoutes()}
-        </main>
-        <footer>
-          <Footer />
-        </footer>
-      </div>
+      <AddressContext.Provider value={value}>
+        <div>
+          <nav>
+            <NavBar />
+          </nav>
+          <main>
+            {this.renderRoutes()}
+          </main>
+          <footer>
+            <Footer />
+          </footer>
+        </div>
+      </AddressContext.Provider>
     )
   }
 }
