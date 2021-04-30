@@ -11,6 +11,11 @@
   align-items: center;
 }
 
+.footer p {
+  font-size: 18px;
+  color: #FFF;
+}
+
 .footer-links {
   list-style-type: none;
   display: flex;
@@ -19,4 +24,10 @@
 
 .footer-links li:first-child {
   padding-bottom: 10px;
+  font-size: 18px;
+}
+
+.footer-links li a {
+  color: #FFF;
+  text-decoration: none;
 }
