@@ -1,7 +1,7 @@
 import React from 'react'
 
 class LoginPage extends React.Component {
-  rener () {
+  render () {
     return (
       <div>
         Login!
