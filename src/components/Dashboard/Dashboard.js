@@ -7,14 +7,15 @@ import Timeline from '../Timeline/Timeline'
 class AddressLog extends React.Component {
   render () {
     return (
-      <div>
-        <header>
+      <div className='dashboard'>
+        <header className='dashboard-header'>
           <h1>Address Timeline</h1>
+          <h2>Scroll to view, or add a new address</h2>
         </header>
-        <div>
+        <div className='dashboard-link'>
           <Link to='/add-address'>Add address</Link>
         </div>
-        <div>
+        <div className='dashboard-timeline'>
           <Timeline />
         </div>
       </div>

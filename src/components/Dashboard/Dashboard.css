@@ -1,0 +1,16 @@
+.dashboard {
+  background-color: darkgrey;
+}
+
+
+.dashboard-header, .dashboard-link {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.dashboard-link {
+  padding-bottom: 20px;
+}
+
