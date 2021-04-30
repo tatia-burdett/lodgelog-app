@@ -12,7 +12,7 @@ class NavBar extends React.Component {
             <Link to='/dashboard'>Dashboard</Link>
           </li>
           <li>
-            <Link to=''>Login</Link>
+            <Link to='/login'>Login</Link>
           </li>
         </ul>
       </div>
