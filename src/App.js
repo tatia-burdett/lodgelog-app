@@ -7,6 +7,7 @@ import LandingPage from './components/LandingPage/LandingPage'
 import Dashboard from './components/Dashboard/Dashboard'
 import Login from './components/LoginPage/LoginPage'
 import SignUpPage from './components/SignUpPage/SignUpPage'
+import Footer from './components/Footer/Footer'
 
 class App extends React.Component {
 
@@ -43,6 +44,9 @@ renderRoutes () {
         <main>
           {this.renderRoutes()}
         </main>
+        <footer>
+          <Footer />
+        </footer>
       </div>
     )
   }
