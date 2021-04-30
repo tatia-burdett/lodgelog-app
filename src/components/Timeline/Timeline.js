@@ -5,7 +5,7 @@ class Timeline extends React.Component {
     return (
       <div className='timeline'>
         <section>
-          Address timeline
+          
         </section>
       </div>
     )
