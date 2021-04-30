@@ -4,6 +4,7 @@ import './App.css'
 
 import NavBar from './components/NavBar/NavBar'
 import LandingPage from './components/LandingPage/LandingPage'
+import AddressLog from './components/AddressLog/AddressLog'
 
 class App extends React.Component {
 
@@ -14,6 +15,10 @@ renderRoutes () {
         exact
         path='/'
         component={LandingPage}
+      />
+      <Route 
+        path='/dashboard'
+        component={AddressLog}
       />
     </div>
   )
