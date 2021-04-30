@@ -2,6 +2,8 @@ import React from 'react';
 import { Route } from 'react-router-dom'
 import './App.css'
 
+import data from './mockdata'
+
 import NavBar from './components/NavBar/NavBar'
 import LandingPage from './components/LandingPage/LandingPage'
 import Dashboard from './components/Dashboard/Dashboard'
@@ -41,6 +43,8 @@ renderRoutes () {
 }
 
   render () {
+    console.log(data)
+
     return (
       <div>
         <nav>
