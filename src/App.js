@@ -4,7 +4,7 @@ import './App.css'
 
 import NavBar from './components/NavBar/NavBar'
 import LandingPage from './components/LandingPage/LandingPage'
-import AddressLog from './components/AddressLog/AddressLog'
+import Dashboard from './components/Dashboard/Dashboard'
 
 class App extends React.Component {
 
@@ -18,7 +18,7 @@ renderRoutes () {
       />
       <Route 
         path='/dashboard'
-        component={AddressLog}
+        component={Dashboard}
       />
     </div>
   )

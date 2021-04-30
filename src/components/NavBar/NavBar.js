@@ -9,7 +9,7 @@ class NavBar extends React.Component {
         <h1><Link to='/' className='nav-header'>LodgeLog</Link></h1>
         <ul className='nav-links'>
           <li>
-            <Link to=''>Dashboard</Link>
+            <Link to='/dashboard'>Dashboard</Link>
           </li>
           <li>
             <Link to=''>Login</Link>
