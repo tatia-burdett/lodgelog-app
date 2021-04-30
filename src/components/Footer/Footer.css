@@ -1,0 +1,22 @@
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: darkslategray;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-links {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links li:first-child {
+  padding-bottom: 10px;
+}
