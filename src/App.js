@@ -6,6 +6,7 @@ import NavBar from './components/NavBar/NavBar'
 import LandingPage from './components/LandingPage/LandingPage'
 import Dashboard from './components/Dashboard/Dashboard'
 import Login from './components/LoginPage/LoginPage'
+import SignUpPage from './components/SignUpPage/SignUpPage'
 
 class App extends React.Component {
 
@@ -24,6 +25,10 @@ renderRoutes () {
       <Route 
         path='/login'
         component={Login}
+      />
+      <Route 
+        path='/sign-up'
+        component={SignUpPage}
       />
     </div>
   )
