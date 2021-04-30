@@ -11,16 +11,7 @@ class Timeline extends React.Component {
 
     return (
       <div className='timeline'>
-        {address.map(a => 
-          <section className='timeline-address' key={a.id}>
-            <div className='timeline-content'>
-              <h2>{a.year}</h2>
-              <p>{a.street_address} Apt/Unit: {a.unit || ''}</p>
-              <p>{a.city}, {a.state} {a.zipcode}</p>
-              <p>{a.current ? 'Current Address' : ''}</p>
-            </div>
-          </section>  
-        )}
+
       </div>
     )
   }

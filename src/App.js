@@ -57,9 +57,9 @@ renderRoutes () {
           <main>
             {this.renderRoutes()}
           </main>
-          <footer>
+          {/* <footer>
             <Footer />
-          </footer>
+          </footer> */}
         </div>
       </AddressContext.Provider>
     )
