@@ -19,10 +19,10 @@ class Timeline extends React.Component {
       renderAddress = address.map(a => {
         return (
           <VerticalTimelineElement
-          contentStyle={{ background: 'darkslategray', color: '#fff' }}
-          contentArrowStyle={{ borderRight: '7px solid  darkslategray' }}
+          contentStyle={{ background: 'darkgray', color: '#000' }}
+          contentArrowStyle={{ borderRight: '7px solid  darkgray' }}
           key={a.id}
-          iconStyle={{ background: 'darkslategray', color: '#fff' }}
+          iconStyle={{ background: 'darkgray', color: '#000' }}
           icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
         >
           <h3>{a.year}</h3>

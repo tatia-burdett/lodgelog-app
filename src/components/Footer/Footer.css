@@ -1,12 +1,12 @@
 .footer-container {
-  background-color: darkslategray;
+  background-color: darkgray;
   padding: 20px 20px;
   display: flex;
   justify-content: space-between;
 }
 
 .footer-container p, .footer-container ul {
-  color: #F5F0F6;
+  color: #000;
   margin: 0;
   padding: 0 5px;
 }
@@ -16,15 +16,7 @@
 }
 
 .footer-container ul li a {
-  color: #F5F0F6;
+  color: #000;
   text-decoration: none;
   cursor: pointer;
-}
-
-.footer-container ul li a:hover, .footer-container ul li a:active {
-  color: #F0F600;
-}
-
-.landing-footer ul li a:active {
-  color: #BC7C9C;
 }
