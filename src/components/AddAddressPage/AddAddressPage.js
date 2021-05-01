@@ -1,4 +1,5 @@
 import React from 'react'
+import './AddAddressPage.css'
 
 class AddAddressPage extends React.Component {
   render () {
