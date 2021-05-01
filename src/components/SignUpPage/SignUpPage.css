@@ -1,0 +1,30 @@
+.signup-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.signup-page-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-page-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-page-form label {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.signup-page-form input {
+  padding: 5px;
+  font-size: 18px;
+}
