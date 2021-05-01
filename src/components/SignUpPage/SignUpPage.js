@@ -46,7 +46,7 @@ class SignUpPage extends React.Component {
               required
             />
 
-            <button type='submit' class='submit-button'>
+            <button type='submit' className='submit-button'>
               Submit
             </button>
           </form>
