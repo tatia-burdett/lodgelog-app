@@ -1,0 +1,31 @@
+.login-page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-page-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-page-form label {
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.login-page-form input {
+  padding: 5px;
+  font-size: 18px;
+}
+

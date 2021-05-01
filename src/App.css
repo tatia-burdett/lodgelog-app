@@ -1,3 +1,10 @@
 main {
   margin-top: 90px;
 }
+
+
+.submit-button {
+  padding: 5px;
+  width: 5em;
+  margin: 10px;
+}
