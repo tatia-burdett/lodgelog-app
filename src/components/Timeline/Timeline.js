@@ -13,24 +13,33 @@ class Timeline extends React.Component {
 
   render () {
     const address = this.context.data
-    console.log(address)
+
+    let renderAddress
+    if (address) {
+      renderAddress = address.map(a => {
+        return (
+          <VerticalTimelineElement
+          contentStyle={{ background: 'darkslategray', color: '#fff' }}
+          contentArrowStyle={{ borderRight: '7px solid  darkslategray' }}
+          key={a.id}
+          iconStyle={{ background: 'darkslategray', color: '#fff' }}
+          icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
+        >
+          <h3>{a.year}</h3>
+          <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
+          <p>{a.city}, {a.state} {a.zipcode}</p>
+          <p>{a.current ? 'Current Address' : ''}</p>
+        </VerticalTimelineElement>
+        )
+      })
+    }
+    
 
     return (
       <VerticalTimeline>
-        {address.map(a => 
-          <VerticalTimelineElement
-            contentStyle={{ background: 'darkslategray', color: '#fff' }}
-            contentArrowStyle={{ borderRight: '7px solid  darkslategray' }}
-            key={a.id}
-            iconStyle={{ background: 'darkslategray', color: '#fff' }}
-            icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
-          >
-            <h3>{a.year}</h3>
-            <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
-            <p>{a.city}, {a.state} {a.zipcode}</p>
-            <p>{a.current ? 'Current Address' : ''}</p>
-          </VerticalTimelineElement>
-        )}
+        <div>
+        {renderAddress}
+        </div>
       </VerticalTimeline>
     )
   }
