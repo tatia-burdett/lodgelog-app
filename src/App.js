@@ -50,16 +50,18 @@ renderRoutes () {
   
     return (
       <AddressContext.Provider value={value}>
-        <div>
-          <nav>
-            <NavBar />
-          </nav>
-          <main>
-            {this.renderRoutes()}
-          </main>
-          {/* <footer>
+        <div className='app-container'>
+          <div className='app-full-screen'>
+            <nav>
+              <NavBar />
+            </nav>
+            <main>
+              {this.renderRoutes()}
+            </main>
+          </div>
+          <footer>
             <Footer />
-          </footer> */}
+          </footer>
         </div>
       </AddressContext.Provider>
     )
