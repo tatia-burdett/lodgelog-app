@@ -77,7 +77,7 @@ class App extends React.Component {
 
   render () {
     const value = {
-      data: data
+      address: this.state.address
     }
   
     return (
