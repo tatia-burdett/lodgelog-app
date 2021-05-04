@@ -15,34 +15,65 @@ import AddAddressPage from './components/AddAddressPage/AddAddressPage'
 import Footer from './components/Footer/Footer'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: [],
+      address: [],
+      error: null
+    }
+  }
 
-renderRoutes () {
-  return (
-    <div>
-      <Route 
-        exact
-        path='/'
-        component={LandingPage}
-      />
-      <Route 
-        path='/dashboard'
-        component={Dashboard}
-      />
-      <Route 
-        path='/login'
-        component={Login}
-      />
-      <Route 
-        path='/sign-up'
-        component={SignUpPage}
-      />
-      <Route 
-        path='/add-address'
-        component={AddAddressPage}
-      />
-    </div>
-  )
-}
+  componentDidMount() {
+    this.fetchAllData()
+  }
+
+  fetchAllData = () => {
+    Promise.all([
+      this.fetchAddress
+    ])
+      .then(([address]) => {
+        this.setState({
+          address
+        })
+      })
+      .catch(error => {
+        this.setState({error})
+      })
+  }
+
+  fetchAddress = () => {
+    return fetch(`${config.API_ENDPOINT}/address`)
+      .then(res => res.json())
+  }
+
+  renderRoutes () {
+    return (
+      <div>
+        <Route 
+          exact
+          path='/'
+          component={LandingPage}
+        />
+        <Route 
+          path='/dashboard'
+          component={Dashboard}
+        />
+        <Route 
+          path='/login'
+          component={Login}
+        />
+        <Route 
+          path='/sign-up'
+          component={SignUpPage}
+        />
+        <Route 
+          path='/add-address'
+          component={AddAddressPage}
+        />
+      </div>
+    )
+  }
 
   render () {
     const value = {
