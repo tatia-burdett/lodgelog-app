@@ -12,7 +12,8 @@ class Timeline extends React.Component {
   static contextType = AddressContext
 
   render () {
-    const address = this.context.data
+    const address = this.context.address
+    console.log(address)
 
     let renderAddress
     if (address) {
