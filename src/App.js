@@ -2,6 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom'
 import './App.css'
 import AddressContext from './AddressContext'
+import FetchApiService from './services/fetch-api-service'
 
 import NavBar from './components/NavBar/NavBar'
 import LandingPage from './components/LandingPage/LandingPage'
@@ -12,6 +13,21 @@ import AddAddressPage from './components/AddAddressPage/AddAddressPage'
 import Footer from './components/Footer/Footer'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      user: [],
+      address: [],
+    }
+  }
+
+  setUser = user => {
+    this.setState({ user })
+  }
+
+  setAddress = address => {
+    this.setState({ address })
+  }
 
   renderRoutes () {
     return (
@@ -43,7 +59,10 @@ class App extends React.Component {
 
   render () {
     const value = {
-      // address: this.state.address
+      user: this.state.user,
+      address: this.state.address,
+      setUser: this.setUser,
+      setAddress: this.setAddress
     }
   
     return (

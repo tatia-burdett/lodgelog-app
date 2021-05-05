@@ -1,6 +1,7 @@
 import React from 'react'
 
 class LoginForm extends React.Component {
+
   render() {
     return (
       <form className='login-page-form'>
