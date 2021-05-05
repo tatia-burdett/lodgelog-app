@@ -3,8 +3,6 @@ import { Route } from 'react-router-dom'
 import './App.css'
 import AddressContext from './AddressContext'
 
-import data from './mockdata'
-
 import NavBar from './components/NavBar/NavBar'
 import LandingPage from './components/LandingPage/LandingPage'
 import Dashboard from './components/Dashboard/Dashboard'
