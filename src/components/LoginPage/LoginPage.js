@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './LoginPage.css'
 
+import LoginForm from '../LoginForm/LoginForm'
+
 class LoginPage extends React.Component {
   render () {
     return (
@@ -11,29 +13,7 @@ class LoginPage extends React.Component {
           <h2>Click the 'sign up' button to create an account</h2>
         </header>
         <section className='login-page-section'>
-          <form className='login-page-form'>
-            <label htmlFor='username'>Username</label>
-            <input 
-              type='text'
-              id='username'
-              name='username'
-              placeholder='username'
-              required
-            />
-
-            <label htmlFor='password'>Password</label>
-            <input 
-              type='text'
-              id='password'
-              name='password'
-              placeholder='password'
-              required
-            />
-
-            <button type='submit' className='submit-button'>
-              Login
-            </button>
-          </form>
+          <LoginForm />
           <Link to='/sign-up'>Sign Up!</Link>
         </section>
       </div>

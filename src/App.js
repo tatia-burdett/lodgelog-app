@@ -14,16 +14,6 @@ import AddAddressPage from './components/AddAddressPage/AddAddressPage'
 import Footer from './components/Footer/Footer'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      user: [],
-      address: [],
-      error: null
-    }
-  }
-
-  
 
   renderRoutes () {
     return (
@@ -55,7 +45,7 @@ class App extends React.Component {
 
   render () {
     const value = {
-      address: this.state.address
+      // address: this.state.address
     }
   
     return (
