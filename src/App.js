@@ -2,7 +2,6 @@ import React from 'react';
 import { Route } from 'react-router-dom'
 import './App.css'
 import AddressContext from './AddressContext'
-import config from './config'
 
 import data from './mockdata'
 
@@ -23,6 +22,8 @@ class App extends React.Component {
       error: null
     }
   }
+
+  
 
   renderRoutes () {
     return (
