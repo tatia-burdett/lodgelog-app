@@ -24,29 +24,6 @@ class App extends React.Component {
     }
   }
 
-  componentDidMount() {
-    this.fetchAllData()
-  }
-
-  fetchAllData = () => {
-    Promise.all([
-      this.fetchAddress
-    ])
-      .then(([address]) => {
-        this.setState({
-          address
-        })
-      })
-      .catch(error => {
-        this.setState({error})
-      })
-  }
-
-  fetchAddress = () => {
-    return fetch(`${config.API_ENDPOINT}/address`)
-      .then(res => res.json())
-  }
-
   renderRoutes () {
     return (
       <div>
