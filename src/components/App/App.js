@@ -43,10 +43,6 @@ class App extends React.Component {
 
   render () {
     const value = {
-      user: this.state.user,
-      address: this.state.address,
-      setUser: this.setUser,
-      setAddress: this.setAddress
     }
   
     return (
