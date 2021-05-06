@@ -17,6 +17,27 @@ import AddAddressPage from '../AddAddressPage/AddAddressPage'
 import Footer from '../Footer/Footer'
 
 class App extends React.Component {
+  constructor(props) {
+    super(props) 
+    this.state = {
+      address: [],
+      error: null
+    }
+  }
+
+  setError = error => {
+    console.log(error)
+    this.setState({ error })
+  }
+
+  clearError = () => {
+    this.setState({ error: null })
+  }
+
+  setAddress = address => {
+    this.setState({ address })
+  }
+
   state = { hasError: false }
 
   static getDerivedStateFromError(error) {
@@ -76,6 +97,11 @@ class App extends React.Component {
 
   render () {
     const value = {
+      address: this.state.address,
+      error: this.state.error,
+      setError: this.setError,
+      clearError: this.clearError,
+      setAddress: this.setAddress
     }
   
     return (
