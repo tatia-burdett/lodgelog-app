@@ -1,10 +1,22 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import './Dashboard.css'
+import AddressContext from '../../AddressContext'
 
 import Timeline from '../Timeline/Timeline'
 
 class AddressLog extends React.Component {
+  static defaultProps = {
+    match: { params: {} }
+  }
+
+  static contextType = AddressContext
+
+  componentDidMount() {
+    const { id } = this.props.match.params
+    console.log(id)
+  }
+
   render () {
     return (
       <div className='dashboard'>

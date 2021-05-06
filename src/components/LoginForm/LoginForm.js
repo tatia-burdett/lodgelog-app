@@ -10,7 +10,6 @@ class LoginForm extends React.Component {
 
   handleSubmitJwtAuth = e => {
     e.preventDefault()
-    console.log('handleSubmit reached')
     this.setState({ error: null })
     const { username, password } = e.target
 
