@@ -18,6 +18,13 @@ const IdleService = {
     _notIdleEvents.forEach(event => 
       document.removeEventListener(event, IdleService.resetIdleTimer, true)
     )
+  },
+
+  unRegisterIdleResets() {
+    clearTimeout(_timeoutId)
+    _notIdleEvents.forEach(event => {
+      document.removeEventListener(event, IdleService.resetIdleTimer, true)
+    }) 
   }
 }
 
