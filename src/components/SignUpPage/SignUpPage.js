@@ -4,6 +4,17 @@ import './SignUpPage.css'
 import SignUpForm from '../SignUpForm/SignUpForm'
 
 class SignUpPage extends React.Component {
+  static defaultProps = {
+    history: {
+      push: () => {}
+    }
+  }
+
+  handleSignUpSuccess = user => {
+    const { history } = this.props
+    history.push('/login')
+  }
+
   render () {
     return (
       <div className='signup-page'>
@@ -11,7 +22,9 @@ class SignUpPage extends React.Component {
           <h1>Sign Up</h1>
         </header>
         <section className='signup-page-section'>
-          <SignUpForm />
+          <SignUpForm 
+            onSignUpSuccess={this.handleSignUpSuccess}
+          />
         </section>
       </div>
     )
