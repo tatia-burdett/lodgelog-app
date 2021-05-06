@@ -3,6 +3,8 @@ import { Route } from 'react-router-dom'
 import './App.css'
 import AddressContext from '../../AddressContext'
 
+import PrivateRoute from '../Utils/PrivateRoute'
+import PublicRoute from '../Utils/PublicRoute'
 import NavBar from '../NavBar/NavBar'
 import LandingPage from '../LandingPage/LandingPage'
 import Dashboard from '../Dashboard/Dashboard'
@@ -21,19 +23,19 @@ class App extends React.Component {
           path='/'
           component={LandingPage}
         />
-        <Route 
+        <PrivateRoute 
           path='/dashboard'
           component={Dashboard}
         />
-        <Route 
+        <PublicRoute 
           path='/login'
           component={Login}
         />
-        <Route 
+        <PublicRoute 
           path='/sign-up'
           component={SignUpPage}
         />
-        <Route 
+        <PrivateRoute 
           path='/add-address'
           component={AddAddressPage}
         />
