@@ -12,21 +12,6 @@ import AddAddressPage from '../AddAddressPage/AddAddressPage'
 import Footer from '../Footer/Footer'
 
 class App extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      user: [],
-      address: [],
-    }
-  }
-
-  setUser = user => {
-    this.setState({ user })
-  }
-
-  setAddress = address => {
-    this.setState({ address })
-  }
 
   renderRoutes () {
     return (
