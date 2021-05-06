@@ -5,6 +5,19 @@ import './LoginPage.css'
 import LoginForm from '../LoginForm/LoginForm'
 
 class LoginPage extends React.Component {
+  static defaultProps = {
+    location: {},
+    history: {
+      push: () => {}
+    }
+  }
+
+  handleLogin = () => {
+    const { location, history } = this.props
+    const destination = (location.state || {}).from || '/'
+    history.push(destination)
+  }
+
   render () {
     return (
       <div className='login-page'>
@@ -13,7 +26,9 @@ class LoginPage extends React.Component {
           <h2>Click the 'sign up' button to create an account</h2>
         </header>
         <section className='login-page-section'>
-          <LoginForm />
+          <LoginForm 
+            onLoginSuccess={this.handleLogin}
+          />
           <Link to='/sign-up'>Sign Up!</Link>
         </section>
       </div>
