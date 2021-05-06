@@ -1,10 +1,43 @@
 import React from 'react'
+import AuthApiService from '../../services/auth-api-service'
 
 class LoginForm extends React.Component {
+  static defaultProps = {
+    onLoginSuccess: () => {}
+  }
+
+  state = { error: null }
+
+  handleSubmitJwtAuth = e => {
+    e.preventDefault()
+    this.setState({ error: null })
+    const { username, password } = e.target
+
+    AuthApiService.postLogin({
+      username: username.value,
+      password: password.value
+    })
+      .then(res => {
+        username.value = ''
+        password.value = ''
+        this.props.onLoginSuccess()
+      })
+      .catch(res => {
+        this.setState({ error: res.error })
+      })
+  }
 
   render() {
+    const { error } = this.state
     return (
-      <form className='login-page-form'>
+      <form 
+        className='login-page-form'
+        onSubmit={this.handleSubmitJwtAuth}
+      >
+        <div role='alert'>
+          {error && <p>{error}</p>}
+        </div>
+        
         <label htmlFor='username'>Username</label>
         <input 
           type='text'
