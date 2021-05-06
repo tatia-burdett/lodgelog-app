@@ -1,17 +1,42 @@
 import React from 'react'
+import AuthApiService from '../../services/auth-api-service'
 
 class SignUpForm extends React.Component {
+  static defaultProps = {
+    onSignUpSuccess: () => {}
+  }
+
+  state = { error: null }
+
+  handleSubmit = e => {
+    e.preventDefault()
+    const { username, password } = e.target
+
+    this.setState({ error: null })
+    AuthApiService.postUser({
+      username: username.value,
+      password: password.value
+    })
+    .then(user => {
+      username.value = ''
+      password.value = ''
+      this.props.onSignUpSuccess()
+    })
+    .catch(res => {
+      this.setState({ error: res.error })
+    })
+  }
+
   render() {
+    const { error } = this.state
     return (
-      <form className='signup-page-form'>
-        <label htmlFor='name'>Name</label>
-        <input 
-          type='text'
-          id='name'
-          name='name'
-          placeholder='name'
-          required
-        />
+      <form 
+        className='signup-page-form'
+        onSubmit={this.handleSubmit}
+      >
+        <div role='alert'>
+          {error && <p>{error}</p>}
+        </div>
 
         <label htmlFor='username'>Username</label>
         <input 
@@ -31,17 +56,8 @@ class SignUpForm extends React.Component {
           required
         />
 
-        <label htmlFor='repassword'>Re-enter Password</label>
-        <input 
-          type='text'
-          id='repassword'
-          name='repassword'
-          placeholder='repeat password'
-          required
-        />
-
         <button type='submit' className='submit-button'>
-          Submit
+          Sign Up
         </button>
       </form>
     )
