@@ -13,7 +13,6 @@ class Timeline extends React.Component {
 
   render () {
     const address = this.context.address
-    console.log(address)
 
     let renderAddress
     if (address) {
