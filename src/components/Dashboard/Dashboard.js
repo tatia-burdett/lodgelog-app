@@ -12,12 +12,14 @@ class AddressLog extends React.Component {
 
   static contextType = AddressContext
 
-  componentDidMount() {
-    const { id } = this.props.match.params
-    console.log(id)
-  }
+  // componentDidMount() {
+  //   const { id } = this.props.match.params
+  //   console.log(id)
+  // }
 
   render () {
+    console.log(this.context.address)
+    
     return (
       <div className='dashboard'>
         <header className='dashboard-header'>
