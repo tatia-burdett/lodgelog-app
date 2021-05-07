@@ -21,6 +21,8 @@ class App extends React.Component {
     super(props) 
     this.state = {
       address: [],
+      user: [],
+      userId: [],
       error: null
     }
   }
@@ -36,6 +38,15 @@ class App extends React.Component {
 
   setAddress = address => {
     this.setState({ address })
+  }
+
+  setUser = user => {
+    this.setState({ user })
+  }
+
+  setCurrentUser = userId => {
+    this.setState({ userId })
+    console.log(userId)
   }
 
   state = { hasError: false }
@@ -101,9 +112,13 @@ class App extends React.Component {
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setAddress: this.setAddress
+      setAddress: this.setAddress,
+      setUser: this.setUser,
+      user: this.state.user,
+      setCurrentUser: this.setCurrentUser,
+      userId: this.state.userId
     }
-  
+
     return (
       <AddressContext.Provider value={value}>
         <div className='app-container'>
