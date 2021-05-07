@@ -41,7 +41,6 @@ class App extends React.Component {
 
   setCurrentUser = currentUser => {
     this.setState({ currentUser })
-    console.log(currentUser)
   }
 
   state = { hasError: false }
@@ -108,7 +107,8 @@ class App extends React.Component {
       setError: this.setError,
       clearError: this.clearError,
       setAddress: this.setAddress,
-      setCurrentUser: this.setCurrentUser
+      setCurrentUser: this.setCurrentUser,
+      currentUser: this.state.currentUser
     }
 
     return (

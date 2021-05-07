@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import './Dashboard.css'
 import AddressContext from '../../AddressContext'
+import config from '../../config'
+import TokenService from '../../services/token-service'
 
 import Timeline from '../Timeline/Timeline'
 
@@ -12,8 +14,23 @@ class AddressLog extends React.Component {
 
   static contextType = AddressContext
 
+
+  componentDidMount() {
+    // const userId = this.context.currentUser
+    fetch(`${config.API_ENDPOINT}/address/1`, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
+    })
+      .then(res => {
+        (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json().then(data => this.context.setAddress(data))
+      })
+  }
+
   render () {
-    
+    console.log(this.context.address)
     return (
       <div className='dashboard'>
         <header className='dashboard-header'>
