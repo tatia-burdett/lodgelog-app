@@ -37,7 +37,15 @@ class AddAddressForm extends React.Component {
         return res.json()
       })
       .then(() => {
-        this.props.history.goBack()
+        from_date.value = ''
+        to_date.value = ''
+        street_address.value = ''
+        unit.value = ''
+        city.value = ''
+        abb_state.value = ''
+        zipcode.value = ''
+        current.value = ''
+        this.props.history.push('/dashboard')
       })
       .catch(error => {
         this.setState({ error })

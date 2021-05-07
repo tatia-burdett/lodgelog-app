@@ -11,7 +11,7 @@ class AddAddressPage extends React.Component {
           <h1>Add an Address</h1>
         </header>
         <section className='add-address-page-section'>
-          <AddAddressForm />
+          <AddAddressForm {...this.props}/>
         </section>
       </div>
     )
