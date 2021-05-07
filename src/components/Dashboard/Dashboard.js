@@ -16,8 +16,8 @@ class AddressLog extends React.Component {
 
 
   componentDidMount() {
-    // const userId = this.context.currentUser
-    fetch(`${config.API_ENDPOINT}/address/1`, {
+    const userId = this.context.currentUser
+    fetch(`${config.API_ENDPOINT}/address/${userId}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       }
@@ -30,7 +30,6 @@ class AddressLog extends React.Component {
   }
 
   render () {
-    console.log(this.context.address)
     return (
       <div className='dashboard'>
         <header className='dashboard-header'>
