@@ -1,4 +1,5 @@
 import config from '../config'
+import TokenService from '../services/token-service'
 
 const FetchApiService = {
   getUsers() {
@@ -27,9 +28,9 @@ const FetchApiService = {
   },
 
   getAddressForUser(userId) {
-    return fetch(`${config.API_ENDPOINT}/user/${userId}/address`, {
+    return fetch(`${config.API_ENDPOINT}/address/${userId}`, {
       headers: {
-
+        'authorization': `bearer ${TokenService.getAuthToken()}`
       }
     })
     .then(res => {
