@@ -21,8 +21,7 @@ class App extends React.Component {
     super(props) 
     this.state = {
       address: [],
-      user: [],
-      userId: [],
+      currentUser: [],
       error: null
     }
   }
@@ -40,13 +39,9 @@ class App extends React.Component {
     this.setState({ address })
   }
 
-  setUser = user => {
-    this.setState({ user })
-  }
-
-  setCurrentUser = userId => {
-    this.setState({ userId })
-    console.log(userId)
+  setCurrentUser = currentUser => {
+    this.setState({ currentUser })
+    console.log(currentUser)
   }
 
   state = { hasError: false }
@@ -113,10 +108,7 @@ class App extends React.Component {
       setError: this.setError,
       clearError: this.clearError,
       setAddress: this.setAddress,
-      setUser: this.setUser,
-      user: this.state.user,
-      setCurrentUser: this.setCurrentUser,
-      userId: this.state.userId
+      setCurrentUser: this.setCurrentUser
     }
 
     return (

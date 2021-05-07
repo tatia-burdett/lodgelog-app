@@ -12,43 +12,18 @@ class LoginForm extends React.Component {
 
   state = { error: null }
 
-  componentDidMount() {
-    this.fetchAllData()
-  }
-
-  fetchAllData = () => {
-    Promise.all([
-      this.fetchUsers()
-    ])
-      .then(this.context.setUser)
-      .catch(this.context.setError)
-  }
-
-  fetchUsers = () => {
-    return fetch(`${config.API_ENDPOINT}/user`)
-      .then(res => res.json())
-  }
-
-  matchUser = (username) => {
-    const user = this.context.user[0]
-    console.log(username)
-    const findUser = user.filter(u => u.username === username)
-    return this.context.setCurrentUser(findUser[0].id)
-  }
-
   handleSubmitJwtAuth = e => {
     e.preventDefault()
     this.setState({ error: null })
     const { username, password } = e.target
-    this.matchUser(username.value)
-
 
     AuthApiService.postLogin({
       username: username.value,
       password: password.value
     })
       .then(res => {
-        username.value = ''
+        this.context.setCurrentUser(res.id)
+        .username.value = ''
         password.value = ''
         this.props.onLoginSuccess()
       })
