@@ -18,7 +18,7 @@ class AddAddressForm extends React.Component {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         from_date: `${from_date.value}`,
-        to_date: `${to_date.value}`,
+        to_date: `${to_date.value}` || null,
         street_address: `${street_address.value}`,
         unit: `${unit.value}`,
         city: `${city.value}`,

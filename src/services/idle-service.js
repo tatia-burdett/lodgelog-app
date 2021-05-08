@@ -9,7 +9,7 @@ const IdleService = {
   },
 
   resetIdleTimer(e) {
-    console.info('event:', e.type)
+    // console.info('event:', e.type)
     clearTimeout(_timeoutId)
     _timeoutId = setTimeout(_idleCallback, _FIVE_MINUTES_IN_MS)
   },

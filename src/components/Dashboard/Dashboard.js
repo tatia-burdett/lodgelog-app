@@ -16,7 +16,7 @@ class AddressLog extends React.Component {
 
   componentDidMount() {
     const userId = this.context.currentUser
-    fetch(`${config.API_ENDPOINT}/address/${userId}`, {
+    fetch(`${config.API_ENDPOINT}/address/user/${userId}`, {
       headers: {
         'authorization': `Bearer ${TokenService.getAuthToken()}`
       }
