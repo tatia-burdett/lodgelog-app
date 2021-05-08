@@ -3,12 +3,16 @@ import { Link } from 'react-router-dom'
 import './NavBar.css'
 import TokenService from '../../services/token-service'
 import IdleService from '../../services/idle-service'
+import AddressContext from '../../AddressContext'
 
 class NavBar extends React.Component {
+  static contextType = AddressContext
+
   handleLogout = () => {
     TokenService.clearAuthToken()
     TokenService.clearCallbackBeforeExpiry()
     IdleService.unRegisterIdleResets()
+    this.context.clearCurrentUser()
   }
 
   renderLogoutLink = () => {

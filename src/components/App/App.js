@@ -43,6 +43,10 @@ class App extends React.Component {
     this.setState({ currentUser })
   }
 
+  clearCurrentUser = () => {
+    this.setState({ currentUser: [] })
+  }
+
   state = { hasError: false }
 
   static getDerivedStateFromError(error) {
@@ -108,7 +112,8 @@ class App extends React.Component {
       clearError: this.clearError,
       setAddress: this.setAddress,
       setCurrentUser: this.setCurrentUser,
-      currentUser: this.state.currentUser
+      currentUser: this.state.currentUser,
+      clearCurrentUser: this.clearCurrentUser
     }
 
     return (
