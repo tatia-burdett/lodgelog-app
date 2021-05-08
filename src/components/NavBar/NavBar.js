@@ -13,6 +13,7 @@ class NavBar extends React.Component {
     TokenService.clearCallbackBeforeExpiry()
     IdleService.unRegisterIdleResets()
     this.context.clearCurrentUser()
+    this.context.clearAddress()
   }
 
   renderLogoutLink = () => {

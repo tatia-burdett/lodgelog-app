@@ -39,6 +39,10 @@ class App extends React.Component {
     this.setState({ address })
   }
 
+  clearAddress = () => {
+    this.setState({ address: [] })
+  }
+
   setCurrentUser = currentUser => {
     this.setState({ currentUser })
   }
@@ -113,7 +117,8 @@ class App extends React.Component {
       setAddress: this.setAddress,
       setCurrentUser: this.setCurrentUser,
       currentUser: this.state.currentUser,
-      clearCurrentUser: this.clearCurrentUser
+      clearCurrentUser: this.clearCurrentUser,
+      clearAddress: this.clearAddress
     }
 
     return (
