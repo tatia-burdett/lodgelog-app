@@ -13,8 +13,8 @@ class Timeline extends React.Component {
   static contextType = AddressContext
 
   render () {
-    const address = this.context.address
-
+    let address = this.context.address
+    address.sort((a,b) => (a.from_date < b.from_date ? 1 : -1))
     let renderAddress
     if (address) {
       renderAddress = address.map(a => {
