@@ -6,7 +6,7 @@ import './Timeline.css'
 import Moment from 'react-moment';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faNetworkWired } from '@fortawesome/free-solid-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
 
 
 class Timeline extends React.Component {
@@ -28,7 +28,7 @@ class Timeline extends React.Component {
         >
           <h3>
             <Moment format="D MMM YYYY" withTitle>{a.from_date}</Moment>
-            - 
+            {' '}-{' '}
             <Moment format="D MMM YYYY" withTitle>{a.to_date || new Date()}</Moment>
           </h3>
           <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
