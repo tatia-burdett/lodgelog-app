@@ -64,6 +64,7 @@ class AddAddressForm extends React.Component {
           id='from_date'
           name='from_date'
           required
+          onChange={e => console.log(e.target.value)}
         />
 
         <label htmlFor='to_date'>To</label>
@@ -71,6 +72,7 @@ class AddAddressForm extends React.Component {
           type='text'
           id='to_daye'
           name='to_date'
+          defaultValue=''
         />
 
         <label htmlFor='street_addresss'>Street Address</label>
