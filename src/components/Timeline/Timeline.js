@@ -25,7 +25,7 @@ class Timeline extends React.Component {
           iconStyle={{ background: 'darkgray', color: '#000' }}
           icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
         >
-          <h3>{a.year}</h3>
+          <h3>{a.from_date} {a.to_date ? '-' + a.to_date : '- Present'}</h3>
           <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
           <p>{a.city}, {a.state} {a.zipcode}</p>
           <p>{a.current ? 'Current Address' : ''}</p>
