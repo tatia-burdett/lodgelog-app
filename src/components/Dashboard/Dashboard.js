@@ -14,12 +14,11 @@ class AddressLog extends React.Component {
 
   static contextType = AddressContext
 
-
   componentDidMount() {
     const userId = this.context.currentUser
     fetch(`${config.API_ENDPOINT}/address/${userId}`, {
       headers: {
-        'authorization': `bearer ${TokenService.getAuthToken()}`
+        'authorization': `Bearer ${TokenService.getAuthToken()}`
       }
     })
       .then(res => {
