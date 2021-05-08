@@ -3,9 +3,10 @@ import AddressContext from '../../AddressContext'
 import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import './Timeline.css'
+import Moment from 'react-moment';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faNetworkWired } from '@fortawesome/free-solid-svg-icons'
 
 
 class Timeline extends React.Component {
@@ -25,7 +26,11 @@ class Timeline extends React.Component {
           iconStyle={{ background: 'darkgray', color: '#000' }}
           icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
         >
-          <h3>{a.from_date} {a.to_date ? '-' + a.to_date : '- Present'}</h3>
+          <h3>
+            <Moment format="D MMM YYYY" withTitle>{a.from_date}</Moment>
+            - 
+            <Moment format="D MMM YYYY" withTitle>{a.to_date || new Date()}</Moment>
+          </h3>
           <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
           <p>{a.city}, {a.state} {a.zipcode}</p>
           <p>{a.current ? 'Current Address' : ''}</p>
