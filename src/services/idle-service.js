@@ -8,23 +8,23 @@ const IdleService = {
     _idleCallback = idleCallback
   },
 
-  resetIdleTimer(ev) {
-    console.log('event:', ev.type)
+  resetIdleTimer(e) {
+    console.info('event:', e.type)
     clearTimeout(_timeoutId)
     _timeoutId = setTimeout(_idleCallback, _FIVE_MINUTES_IN_MS)
   },
 
   registerIdleTimerResets() {
-    _notIdleEvents.forEach(event => 
-      document.removeEventListener(event, IdleService.resetIdleTimer, true)
+    _notIdleEvents.forEach(event =>
+      document.addEventListener(event, IdleService.resetIdleTimer, true)
     )
   },
 
   unRegisterIdleResets() {
     clearTimeout(_timeoutId)
-    _notIdleEvents.forEach(event => {
+    _notIdleEvents.forEach(event =>
       document.removeEventListener(event, IdleService.resetIdleTimer, true)
-    }) 
+    )
   }
 }
 
