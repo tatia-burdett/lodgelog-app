@@ -69,7 +69,7 @@ class AddAddressForm extends React.Component {
         <label htmlFor='to_date'>To</label>
         <input 
           type='text'
-          id='to_daye'
+          id='to_date'
           name='to_date'
           defaultValue=''
         />

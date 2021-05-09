@@ -4,6 +4,7 @@ import { VerticalTimeline, VerticalTimelineElement }  from 'react-vertical-timel
 import 'react-vertical-timeline-component/style.min.css';
 import './Timeline.css'
 import Moment from 'react-moment';
+import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
@@ -34,6 +35,7 @@ class Timeline extends React.Component {
           <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
           <p>{a.city}, {a.state} {a.zipcode}</p>
           <p>{a.current ? 'Current Address' : ''}</p>
+          <Link to={`/address/${a.id}`}>Edit Post</Link>
         </VerticalTimelineElement>
         )
       })

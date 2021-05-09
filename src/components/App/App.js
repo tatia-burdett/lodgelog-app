@@ -11,6 +11,7 @@ import PublicRoute from '../Utils/PublicRoute'
 import NavBar from '../NavBar/NavBar'
 import LandingPage from '../LandingPage/LandingPage'
 import Dashboard from '../Dashboard/Dashboard'
+import PatchAddressPage from '../PatchAddressPage/PatchAddressPage'
 import Login from '../LoginPage/LoginPage'
 import SignUpPage from '../SignUpPage/SignUpPage'
 import AddAddressPage from '../AddAddressPage/AddAddressPage'
@@ -91,6 +92,10 @@ class App extends React.Component {
         <PrivateRoute 
           path='/dashboard'
           component={Dashboard}
+        />
+        <PrivateRoute 
+          path='/address/:id'
+          component={PatchAddressPage}
         />
         <PublicRoute 
           path='/login'
