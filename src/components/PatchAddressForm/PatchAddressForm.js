@@ -40,9 +40,6 @@ class PatchAddressForm extends React.Component {
   }
 
   render() {
-    const { id } = this.props.match.params
-    console.log(id)
-
     return (
       <form
         className='patch-address-page-form'
