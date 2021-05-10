@@ -7,7 +7,7 @@ import Moment from 'react-moment';
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
 
 
 class Timeline extends React.Component {
@@ -30,11 +30,11 @@ class Timeline extends React.Component {
           icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
         >
           <h3>
-            From: <Moment format="D MMM YYYY" withTitle>{a.from_date}</Moment>
-            {' '}-{' '}
-            To: <Moment format="D MMM YYYY" withTitle>{a.to_date || new Date()}</Moment>
+            <Moment format="D MMM YYYY" withTitle>{a.from_date}</Moment>
+            {' '}<FontAwesomeIcon icon={faArrowCircleRight} /> {' '}
+            <Moment format="D MMM YYYY" withTitle>{a.to_date || new Date()}</Moment>
           </h3>
-          <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
+          <p>{a.street_address} {a.unit ? 'Unit: ' + a.unit : ''}</p>
           <p>{a.city}, {a.state} {a.zipcode}</p>
           <p>{a.current ? 'Current Address' : ''}</p>
           <Link to={`/address/${a.id}`}>Edit Post</Link>
