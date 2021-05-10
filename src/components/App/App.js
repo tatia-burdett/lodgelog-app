@@ -52,12 +52,6 @@ class App extends React.Component {
     this.setState({ currentUser: [] })
   }
 
-  handleDeleteAddress = id => {
-    this.setState({
-      address: this.state.address.filter(a => a.id !== id)
-    })
-  }
-
   state = { hasError: false }
 
   static getDerivedStateFromError(error) {
@@ -130,7 +124,6 @@ class App extends React.Component {
       currentUser: this.state.currentUser,
       clearCurrentUser: this.clearCurrentUser,
       clearAddress: this.clearAddress,
-      handleDelete: this.handleDeleteAddress
     }
 
     return (

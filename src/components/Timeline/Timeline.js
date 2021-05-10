@@ -15,31 +15,7 @@ class Timeline extends React.Component {
   static contextType = AddressContext
 
   state = { error: null }
-
-  handleDelete = e => {
-    e.preventDefault()
-    const id = e.target.id
-
-    const requestOptions = {
-      method: 'DELETE',
-      headers: {'Content-Type': 'application/json'},
-    }
-
-    fetch(`${config.API_ENDPOINT}/address/${id}`, requestOptions)
-      .then(res => {
-        if (!res.ok) {
-          throw new Error('Oops, something went wrong!')
-        }
-        return res.json()
-      })
-      .then(() => {
-        this.context.handleDelete(id)
-      })
-      .catch(error => {
-        this.setState({ error })
-      })
-  }
-
+  
   render () {
     let address = this.context.address || []
     address.sort((a,b) => (a.from_date < b.from_date ? 1 : -1))
@@ -63,11 +39,6 @@ class Timeline extends React.Component {
           <p>{a.city}, {a.state} {a.zipcode}</p>
           <p>{a.current ? 'Current Address' : ''}</p>
           <Link to={`/address/${a.id}`}>Edit Post</Link>
-          <button 
-          id={a.id}
-          onClick={this.handleDelete}>
-            Delete
-          </button>
         </VerticalTimelineElement>
         )
       })
