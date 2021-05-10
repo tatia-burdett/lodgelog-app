@@ -39,7 +39,7 @@ class AddressLog extends React.Component {
           <Link to='/add-address'>Add address</Link>
         </div>
         <div className='dashboard-timeline'>
-          <Timeline />
+          <Timeline/>
         </div>
       </div>
     )
