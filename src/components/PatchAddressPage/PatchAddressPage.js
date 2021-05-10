@@ -15,11 +15,11 @@ class PatchAddressPage extends React.Component {
 
   render () {
     return (
-      <div className='add-address-page'>
-        <header className='add-address-page-header'>
+      <div className='patch-address-page'>
+        <header className='patch-address-page-header'>
           <h1>Update Address Fields</h1>
         </header>
-        <section className='add-address-page-section'>
+        <section className='patch-address-page-section'>
           <PatchAddressForm {...this.props}/>
         </section>
       </div>
