@@ -14,9 +14,6 @@ class PatchAddressPage extends React.Component {
   }
 
   render () {
-    // const { id } = this.props.match.params
-    // const idInt = parseInt(id)
-
     return (
       <div className='add-address-page'>
         <header className='add-address-page-header'>
