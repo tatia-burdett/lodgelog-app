@@ -52,14 +52,14 @@ class PatchAddressForm extends React.Component {
           name='to_date'
         />
 
-        <label htmlFor='current'>Current Address</label>
+        {/* <label htmlFor='current'>Current Address</label>
         <input 
           type='checkbox'
           id='current'
           name='current'
           defaultValue={false}
           onChange={e => console.log(e.target.value)}
-        />
+        /> */}
 
         <button type='submit' className='submit-button'>
           Update Address
