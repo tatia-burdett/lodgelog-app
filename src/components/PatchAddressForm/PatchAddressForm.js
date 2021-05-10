@@ -52,6 +52,7 @@ class PatchAddressForm extends React.Component {
           type='text'
           id='to_date'
           name='to_date'
+          placeholder='YYYY-MM-DD'
         />
 
         <button type='submit' className='submit-button'>

@@ -65,6 +65,7 @@ class AddAddressForm extends React.Component {
           id='from_date'
           name='from_date'
           required
+          placeholder='YYYY-MM-DD'
         />
 
         <label htmlFor='to_date'>To</label>
@@ -73,6 +74,7 @@ class AddAddressForm extends React.Component {
           id='to_date'
           name='to_date'
           defaultValue=''
+          placeholder='YYYY-MM-DD'
         />
 
         <label htmlFor='street_addresss'>Street Address</label>
