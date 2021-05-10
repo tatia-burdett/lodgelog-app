@@ -4,15 +4,6 @@ import './PatchAddressPage.css'
 import PatchAddressForm from '../PatchAddressForm/PatchAddressForm'
 
 class PatchAddressPage extends React.Component {
-  static defaultProps = {
-    history: {
-      goBack: () => {}
-    },
-    match: {
-      params: {}
-    }
-  }
-
   render () {
     return (
       <div className='patch-address-page'>
