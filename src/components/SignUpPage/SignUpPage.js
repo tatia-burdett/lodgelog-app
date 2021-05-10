@@ -20,6 +20,7 @@ class SignUpPage extends React.Component {
       <div className='signup-page'>
         <header className='signup-page-header'>
           <h1>Sign Up</h1>
+          <h2>Create a username and password.</h2>
         </header>
         <section className='signup-page-section'>
           <SignUpForm 

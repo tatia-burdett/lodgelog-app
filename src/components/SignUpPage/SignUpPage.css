@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.signup-page-header h2 {
+  text-align: center;
+}
+
 .signup-page-section {
   display: flex;
   flex-direction: column;

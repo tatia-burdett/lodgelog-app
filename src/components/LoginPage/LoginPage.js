@@ -23,7 +23,7 @@ class LoginPage extends React.Component {
       <div className='login-page'>
         <header className='login-page-header'>
           <h1>Sign in</h1>
-          <h2>Click the 'sign up' button to create an account</h2>
+          <h2>Click the 'sign up' button below to be redirected to create an account</h2>
         </header>
         <section className='login-page-section'>
           <LoginForm 
