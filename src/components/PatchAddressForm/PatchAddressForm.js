@@ -11,15 +11,14 @@ class PatchAddressForm extends React.Component {
     const { id } = this.props.match.params
     e.preventDefault()
     this.setState({ error: null })
-    const { to_date, current } = e.target
-    // const current = to_date === '' ? true : false
+    const { to_date } = e.target
+
 
     const requestOptions = {
       method: 'PATCH',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
         to_date: `${to_date.value}` || null,
-        current: `${current.value}`
       })
     }
 
@@ -45,21 +44,13 @@ class PatchAddressForm extends React.Component {
         className='patch-address-page-form'
         onSubmit={this.handleSubmit}
       >
+
         <label htmlFor='to_date'>Change To Date</label>
         <input 
           type='text'
           id='to_date'
           name='to_date'
         />
-
-        {/* <label htmlFor='current'>Current Address</label>
-        <input 
-          type='checkbox'
-          id='current'
-          name='current'
-          defaultValue={false}
-          onChange={e => console.log(e.target.value)}
-        /> */}
 
         <button type='submit' className='submit-button'>
           Update Address
