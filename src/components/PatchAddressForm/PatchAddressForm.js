@@ -1,6 +1,7 @@
 import React from 'react'
 import config from '../../config'
 import AddressContext from '../../AddressContext'
+import './PatchAddressForm.css'
 
 class PatchAddressForm extends React.Component {
   static contextType = AddressContext
