@@ -14,7 +14,7 @@ class AddressLog extends React.Component {
 
   static contextType = AddressContext
 
-  componentDidMount() {
+  fetchUserAddresses = () => {
     const userId = this.context.currentUser
     fetch(`${config.API_ENDPOINT}/address/user/${userId}`, {
       headers: {
@@ -28,6 +28,10 @@ class AddressLog extends React.Component {
       })
   }
 
+  componentDidMount() {
+    this.fetchUserAddresses()
+  }
+
   render () {
     return (
       <div className='dashboard'>
@@ -39,7 +43,7 @@ class AddressLog extends React.Component {
           <Link to='/add-address'>Add address</Link>
         </div>
         <div className='dashboard-timeline'>
-          <Timeline/>
+          <Timeline />
         </div>
       </div>
     )

@@ -34,7 +34,6 @@ class Timeline extends React.Component {
       })
       .then(() => {
         this.context.handleDelete(id)
-        this.props.history.push(`/dashboard`)
       })
       .catch(error => {
         this.setState({ error })
