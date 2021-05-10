@@ -36,7 +36,8 @@ class Timeline extends React.Component {
           </h3>
           <p>{a.street_address} {a.unit ? 'Unit: ' + a.unit : ''}</p>
           <p>{a.city}, {a.state} {a.zipcode}</p>
-          <p>{a.current ? 'Current Address' : ''}</p>
+          {/* <p>{a.current ? 'Current Address' : ''}</p>
+          {console.log(a.current)} */}
           <Link to={`/address/${a.id}`}>Edit Post</Link>
         </VerticalTimelineElement>
         )
