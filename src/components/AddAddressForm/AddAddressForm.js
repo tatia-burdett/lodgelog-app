@@ -53,6 +53,7 @@ class AddAddressForm extends React.Component {
   }
 
   render() {
+    console.log(this.props, 'a form')
     return (
       <form 
       className='add-address-page-form'

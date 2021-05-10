@@ -9,9 +9,9 @@ class PatchAddressForm extends React.Component {
   state = { error: null }
 
   handleSubmit = e => {
-    const { id } = this.props.match.params
     e.preventDefault()
     this.setState({ error: null })
+    const { id } = this.props.match.params
     const { to_date } = e.target
 
 
@@ -28,11 +28,11 @@ class PatchAddressForm extends React.Component {
         if (!res.ok) {
           throw new Error('Oops, something went wrong!')
         }
+        window.history.go(-1)
         return res.json()
       })
       .then(() => {
         to_date.value = ''
-        this.props.history.goBack()
       })
       .catch(error => {
         this.setState({ error })
@@ -40,6 +40,7 @@ class PatchAddressForm extends React.Component {
   }
 
   render() {
+    console.log(this.props)
     return (
       <form
         className='patch-address-page-form'
