@@ -5,7 +5,6 @@ import 'react-vertical-timeline-component/style.min.css';
 import './Timeline.css'
 import Moment from 'react-moment';
 import { Link } from 'react-router-dom'
-import config from '../../config'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome } from '@fortawesome/free-solid-svg-icons'
@@ -15,7 +14,7 @@ class Timeline extends React.Component {
   static contextType = AddressContext
 
   state = { error: null }
-  
+
   render () {
     let address = this.context.address || []
     address.sort((a,b) => (a.from_date < b.from_date ? 1 : -1))
@@ -31,9 +30,9 @@ class Timeline extends React.Component {
           icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
         >
           <h3>
-            <Moment format="D MMM YYYY" withTitle>{a.from_date}</Moment>
+            From: <Moment format="D MMM YYYY" withTitle>{a.from_date}</Moment>
             {' '}-{' '}
-            <Moment format="D MMM YYYY" withTitle>{a.to_date || new Date()}</Moment>
+            To: <Moment format="D MMM YYYY" withTitle>{a.to_date || new Date()}</Moment>
           </h3>
           <p>{a.street_address} {a.unit ? 'Unit:' + a.unit : ''}</p>
           <p>{a.city}, {a.state} {a.zipcode}</p>
