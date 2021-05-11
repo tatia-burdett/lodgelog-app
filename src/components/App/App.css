@@ -28,12 +28,16 @@ h1, h2, h3 {
   font-family: 'Bungee Hairline', sans-serif;
 }
 
-p, a {
+p, a, label, input, button {
   font-family: 'Montserrat', sans-serif;
 }
 
 a, button {
   cursor: pointer;
+}
+
+label, input[type='text'], button {
+  font-size: 18px;
 }
 
 .button-link {

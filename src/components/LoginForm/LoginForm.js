@@ -1,6 +1,7 @@
 import React from 'react'
 import AuthApiService from '../../services/auth-api-service'
 import AddressContext from '../../AddressContext'
+import './LoginForm.css'
 
 class LoginForm extends React.Component {
   static defaultProps = {
