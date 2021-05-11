@@ -7,6 +7,12 @@
   margin-top: -50px;
 }
 
+.landing-header h1, .landing-header h2 {
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
 .landing-section {
   display: flex;
   flex-direction: column;
