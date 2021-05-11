@@ -24,8 +24,9 @@
   margin: 0;
 }
 
-.nav-header h1 a {
+.nav-header {
   margin: 0;
+  font-family: 'Bungee Hairline', sans-serif;
 }
 
 .nav-links {
