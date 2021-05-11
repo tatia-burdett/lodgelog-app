@@ -1,5 +1,6 @@
 import React from 'react'
 import AuthApiService from '../../services/auth-api-service'
+import './SignUpForm.css'
 
 class SignUpForm extends React.Component {
   static defaultProps = {
