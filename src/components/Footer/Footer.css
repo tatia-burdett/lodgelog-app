@@ -6,7 +6,7 @@
 }
 
 .footer-container p {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .footer-container p, .footer-container ul {
@@ -27,5 +27,17 @@
 .footer-container ul li a {
   color: #F7F7FF;
   cursor: pointer;
-  font-size: 36px;
+  font-size: 24px;
+}
+
+/* Responsive - Desktop */
+
+@media all and (min-width: 700px) {
+  .footer-container p {
+    font-size: 20px;
+  }
+
+  .footer-container ul li a {
+    font-size: 36px;
+  }
 }
