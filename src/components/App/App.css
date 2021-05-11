@@ -57,6 +57,7 @@ input[type='text'] {
   color: #000;
   text-decoration: none;
   font-size: 18px;
+  transition: 0.5s;
 }
 
 button {
@@ -68,6 +69,17 @@ button {
   backdrop-filter: blur( 5.5px );
   -webkit-backdrop-filter: blur( 5.5px );
   color: #000;
+  transition: 0.5s;
+}
+
+button:hover, 
+button:focus, 
+.button-link:hover, 
+.button-link:focus {
+  background: #4C5B61;
+  color: rgba( 255, 186, 73, 1 );
+  font-weight: 500;
+  border: 1px solid rgba( 255, 186, 73, 1 );
 }
 
 /* Rainbow Effect */
