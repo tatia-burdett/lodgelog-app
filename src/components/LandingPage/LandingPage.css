@@ -8,11 +8,17 @@
   background-color: #4C5B61;
 }
 
+.landing-header h1 {
+  font-size: 42px;
+}
+
 .landing-header h1, .landing-header h2 {
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
   color: #F7F7FF;
+  margin: 0;
+  padding: 20px;
 }
 
 .landing-section {
@@ -28,4 +34,13 @@
 
 .section-content-container p {
   line-height: 1.5;
+}
+
+/* Responsive - Desktop */
+
+@media all and (min-width: 700px) {
+  .landing-header h1 {
+    font-size: 60px;
+    letter-spacing: 10px;
+  }
 }
