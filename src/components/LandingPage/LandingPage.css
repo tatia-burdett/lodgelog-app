@@ -17,9 +17,13 @@
   text-align: center;
   padding-left: 10px;
   padding-right: 10px;
-  color: #F7F7FF;
+  /* color: #F7F7FF; */
   margin: 0;
   padding: 20px;
+}
+
+.landing-header h2 {
+  color: #F7F7FF;
 }
 
 .landing-section {

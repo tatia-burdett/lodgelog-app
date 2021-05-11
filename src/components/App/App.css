@@ -69,3 +69,24 @@ button {
   -webkit-backdrop-filter: blur( 5.5px );
   color: #000;
 }
+
+/* Rainbow Effect */
+
+.rainbow {
+  background: linear-gradient(to right, #FFBA49, #a9be2c , #87A878, #67d670, #F7F7FF);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 10s ease-in-out infinite;
+  background-size: 400% 100%;
+}
+
+@keyframes rainbow_animation {
+  0%,100% {
+      background-position: 0 0;
+  }
+
+  50% {
+      background-position: 100% 0;
+  }
+}

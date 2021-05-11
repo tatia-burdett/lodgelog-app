@@ -7,7 +7,7 @@ class LandingPage extends React.Component {
     return (
       <div className='landing-page'>
         <header className='landing-header'>
-          <h1>LodgeLog</h1>
+          <h1 className='rainbow'>LodgeLog</h1>
           <h2>Your address history, when you need it!</h2>
           <Link to='/login' className='button-link'>Get Started</Link>
         </header>
