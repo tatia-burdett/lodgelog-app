@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: darkgray;
+  background-color: #210124;
   position: fixed;
   top: 0;
   width: 100%;
@@ -20,14 +20,11 @@
   white-space: nowrap;
 }
 
-.nav-header h1 {
-  margin: 0;
-}
-
 .nav-header {
   margin: 0;
   font-family: 'Bungee Hairline', sans-serif;
   font-size: 24px;
+  color: #F7F7FF;
 }
 
 .nav-links {
@@ -43,6 +40,7 @@
   color: #000;
   text-decoration: none;
   font-size: 16px;
+  color: #F7F7FF;
 }
 
 /* Responsive - Desktop */
