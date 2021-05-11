@@ -47,6 +47,8 @@ input[type='text'] {
   background-color: transparent;
 }
 
+/* Buttons and Button-Styled Links */
+
 .button-link {
   background: rgba( 255, 186, 73, 1 );
   box-shadow: 0 2px 10px 0 rgba( 31, 38, 135, 0.1 );
@@ -80,6 +82,10 @@ button:focus,
   color: rgba( 255, 186, 73, 1 );
   font-weight: 500;
   border: 1px solid rgba( 255, 186, 73, 1 );
+}
+
+button:active, .button-link:active {
+  letter-spacing: 5px;
 }
 
 /* Rainbow Effect */
