@@ -9,7 +9,7 @@ class LandingPage extends React.Component {
         <header className='landing-header'>
           <h1>LodgeLog</h1>
           <h2>Your address history, when you need it!</h2>
-          <Link to='/login'>Get Started</Link>
+          <Link to='/login' className='button-link'>Get Started</Link>
         </header>
         <section className='landing-section'>
           <h3>What is LodgeLog?</h3>
