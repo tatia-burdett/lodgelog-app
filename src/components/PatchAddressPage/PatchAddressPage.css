@@ -1,8 +1,17 @@
+.patch-address-page {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
 .patch-address-page-header {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.patch-address-page-header h1 {
+  text-align: center;
 }
 
 .patch-address-page-section {

@@ -1,3 +1,8 @@
+.login-page {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
 .login-page-header {
   display: flex;
   justify-content: center;

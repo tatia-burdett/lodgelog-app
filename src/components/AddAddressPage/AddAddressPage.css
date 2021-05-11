@@ -1,3 +1,8 @@
+.add-address-page {
+  padding-bottom: 40px;
+  padding-top: 20px;
+}
+
 .add-address-page-header {
   display: flex;
   justify-content: center;
