@@ -1,6 +1,7 @@
 import React from 'react'
 import config from '../../config'
 import AddressContext from '../../AddressContext'
+import './AddAddressForm.css'
 
 class AddAddressForm extends React.Component {
   static contextType = AddressContext
