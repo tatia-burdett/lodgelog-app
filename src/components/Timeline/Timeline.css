@@ -2,13 +2,22 @@
   font-size: 21px;
 }
 
+.address-header {
+  font-size: 24px;
+  margin: 0;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  border-bottom: 1px dotted #210124;
+}
+
 .address-content p, a {
+  padding-left: 20px;
   font-size: 18px;
   margin: 0;
-
 }
 
 .address-content p {
+  padding-top: 10px;
   padding-bottom: 10px;
   font-weight: 400;
 }

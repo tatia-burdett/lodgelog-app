@@ -36,7 +36,7 @@ class Timeline extends React.Component {
           }}
           icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
         >
-          <h3>
+          <h3 className='address-header'>
             <Moment format="MMM D YYYY" withTitle>{a.from_date}</Moment>
             {' '}<FontAwesomeIcon icon={faArrowCircleRight} /> {' '}
             <Moment format="MMM D YYYY" withTitle>{a.to_date || new Date()}</Moment>
