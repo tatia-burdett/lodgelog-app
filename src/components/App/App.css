@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Montserrat+Alternates:wght@100;200;300;400;500&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,400&display=swap');
 
 main {
-  margin-top: 90px;
+  margin-top: 80px;
   padding-bottom: 75px;
 }
 
@@ -18,12 +18,14 @@ footer {
 
 /* General Styling */
 
-h1, h2, h3 {
+h1 {
   font-family: 'Bungee Hairline', sans-serif;
 }
 
 h2, h3 {
   letter-spacing: 0.1px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 300;
 }
 
 p, a, label, input, button {

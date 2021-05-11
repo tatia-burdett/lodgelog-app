@@ -24,14 +24,14 @@ class Timeline extends React.Component {
         return (
           <VerticalTimelineElement
           contentStyle={{ 
-            background: 'rgba( 255, 186, 73, 0.60 )', 
+            background: 'rgba( 255, 186, 73, 1 )', 
             boxShadow: '0 8px 32px 0 rgba( 31, 38, 135, 0.37 )',
             color: '#000' 
           }}
-          contentArrowStyle={{ borderRight: '7px solid  rgba( 255, 186, 73, 0.60 )' }}
+          contentArrowStyle={{ borderRight: '7px solid  rgba( 255, 186, 73, 1 )' }}
           key={a.id}
           iconStyle={{ 
-            background: 'rgba( 255, 186, 73, 0.60 )', 
+            background: 'rgba( 255, 186, 73, 1 )', 
             color: '#000' 
           }}
           icon={<FontAwesomeIcon icon={faHome} className='house-icon'/>}
