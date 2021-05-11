@@ -43,6 +43,14 @@
   color: #F7F7FF;
 }
 
+.nav-links a:focus, .nav-links a:hover {
+  color: #FFBA49;
+}
+
+.nav-links a:active, .nav-links a:active {
+  color: rgba( 255, 186, 73, 0.8 );
+}
+
 /* Responsive - Desktop */
 
 @media all and (min-width: 700px) {
