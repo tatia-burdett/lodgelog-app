@@ -7,7 +7,7 @@ import Moment from 'react-moment';
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faArrowCircleRight } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faArrowCircleRight, faEdit } from '@fortawesome/free-solid-svg-icons'
 
 
 class Timeline extends React.Component {
@@ -41,9 +41,14 @@ class Timeline extends React.Component {
             {' '}<FontAwesomeIcon icon={faArrowCircleRight} /> {' '}
             <Moment format="MMM D YYYY" withTitle>{a.to_date || new Date()}</Moment>
           </h3>
-          <p>{a.street_address} {a.unit ? 'Unit: ' + a.unit : ''}</p>
-          <p>{a.city}, {a.state} {a.zipcode}</p>
-          <Link to={`/address/${a.id}`}>Edit Post</Link>
+          <div className='address-content'>
+            <p>{a.street_address} {a.unit ? 'Unit: ' + a.unit : ''}</p>
+            <p>{a.city}, {a.state} {a.zipcode}</p>
+            <Link to={`/address/${a.id}`}>
+              <FontAwesomeIcon icon={faEdit} className='edit-icon'/>
+              {' '}Edit Address
+            </Link>
+          </div>
         </VerticalTimelineElement>
         )
       })

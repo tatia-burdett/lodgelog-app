@@ -44,8 +44,10 @@ class AddressLog extends React.Component {
           <h2>Scroll to view, or add a new address</h2>
         </header>
         <div className='dashboard-link'>
-          <FontAwesomeIcon icon={faPlus} className='plus-icon'/>
-          <Link to='/add-address'>Add Address</Link>
+          <Link to='/add-address'>
+            <FontAwesomeIcon icon={faPlus} className='plus-icon'/> 
+            {' '}Add Address
+          </Link>
         </div>
         <div className='dashboard-timeline'>
           <Timeline />
