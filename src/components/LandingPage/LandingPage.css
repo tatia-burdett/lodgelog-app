@@ -48,4 +48,8 @@
     font-size: 60px;
     letter-spacing: 10px;
   }
+
+  .section-content-container {
+    width: 75%;
+  }
 }
