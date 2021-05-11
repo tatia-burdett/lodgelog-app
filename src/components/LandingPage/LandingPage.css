@@ -23,7 +23,8 @@
 }
 
 .landing-header h2 {
-  color: #F7F7FF;
+  font-weight: 500;
+  /* color: #F7F7FF; */
 }
 
 .landing-section {
