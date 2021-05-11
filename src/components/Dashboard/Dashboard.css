@@ -17,5 +17,19 @@
 
 .dashboard-link {
   padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 }
 
+.plus-icon {
+  font-size: 18px;
+  color: #FFBA49;
+}
+
+.dashboard-link a {
+  color: rgba( 255, 186, 73, 0.8);
+  font-size: 18px;
+  padding-left: 10px;
+}

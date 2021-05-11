@@ -5,6 +5,10 @@ import AddressContext from '../../AddressContext'
 import config from '../../config'
 import TokenService from '../../services/token-service'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlus } from '@fortawesome/free-solid-svg-icons'
+
+
 import Timeline from '../Timeline/Timeline'
 
 class AddressLog extends React.Component {
@@ -40,7 +44,8 @@ class AddressLog extends React.Component {
           <h2>Scroll to view, or add a new address</h2>
         </header>
         <div className='dashboard-link'>
-          <Link to='/add-address'>Add address</Link>
+          <FontAwesomeIcon icon={faPlus} className='plus-icon'/>
+          <Link to='/add-address'>Add Address</Link>
         </div>
         <div className='dashboard-timeline'>
           <Timeline />
