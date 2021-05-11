@@ -5,6 +5,7 @@
 
 .dashboard-header h1, .dashboard-header h2 {
   color: #F7F7FF;
+  text-align: center;
 }
 
 .dashboard-header, .dashboard-link {
