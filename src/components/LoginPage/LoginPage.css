@@ -5,8 +5,11 @@
   flex-direction: column;
 }
 
-.login-page-header h1, .login-page-header h2 {
+.login-page-header h2 {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 22px;
 }
 
 .login-page-section {

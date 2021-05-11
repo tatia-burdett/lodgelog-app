@@ -7,6 +7,10 @@
 
 .signup-page-header h2 {
   text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 22px;
+
 }
 
 .signup-page-section {
