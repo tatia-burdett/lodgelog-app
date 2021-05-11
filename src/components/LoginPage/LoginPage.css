@@ -5,6 +5,10 @@
   flex-direction: column;
 }
 
+.login-page-header h1, .login-page-header h2 {
+  text-align: center;
+}
+
 .login-page-section {
   display: flex;
   flex-direction: column;

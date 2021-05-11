@@ -10,12 +10,6 @@ main {
   display: block;
 }
 
-.submit-button {
-  padding: 5px;
-  width: 5em;
-  margin: 10px;
-}
-
 footer {
   position: absolute;
   bottom: 0;
@@ -50,5 +44,17 @@ label, input[type='text'], button {
   padding: 0.8em 1em;
   color: #000;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
+}
+
+button {
+  padding: 0.8em 1.5em;
+  margin-top: 20px;
+  background: rgba( 255, 186, 73, 0.60 );
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+  box-shadow: 0 1px 5px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 5.5px );
+  -webkit-backdrop-filter: blur( 5.5px );
+  border-radius: 10px;
+  color: #000;
 }
