@@ -1,8 +1,17 @@
 .login-page-form {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .login-page-form input {
   padding: 10px;
   font-size: 20px;
+}
+
+.login-page-form label {
+  padding-bottom: 10px;
+  padding-top: 10px;
 }

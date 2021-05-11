@@ -19,20 +19,6 @@
   align-items: center;
 }
 
-.login-page-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.login-page-section a {
+  color: #4C5B61;
 }
-
-.login-page-form label {
-  padding-bottom: 10px;
-  padding-top: 10px;
-}
-
-.login-page-form input {
-  padding: 5px;
-  font-size: 18px;
-}
-
