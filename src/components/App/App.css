@@ -22,6 +22,10 @@ h1, h2, h3 {
   font-family: 'Bungee Hairline', sans-serif;
 }
 
+h2, h3 {
+  letter-spacing: 0.1px;
+}
+
 p, a, label, input, button {
   font-family: 'Montserrat', sans-serif;
 }
