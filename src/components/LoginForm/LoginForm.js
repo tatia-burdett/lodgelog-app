@@ -41,7 +41,7 @@ class LoginForm extends React.Component {
         onSubmit={this.handleSubmitJwtAuth}
       >
         <div role='alert'>
-          {error && <p>{error}</p>}
+          {error && <p>{error}</p>} 
         </div>
         
         <label htmlFor='username'>Username</label>
