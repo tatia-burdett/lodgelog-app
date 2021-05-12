@@ -60,6 +60,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
+    console.log('app mounted')
     IdleService.setIdleCallback(this.logoutFromIdle)
     if (TokenService.hasAuthToken()) {
       IdleService.registerIdleTimerResets()

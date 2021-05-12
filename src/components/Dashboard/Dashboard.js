@@ -33,6 +33,8 @@ class AddressLog extends React.Component {
   }
 
   componentDidMount() {
+    console.log('mounted')
+    console.log(this.context.currentUser)
     this.fetchUserAddresses()
   }
 
