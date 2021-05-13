@@ -19,12 +19,12 @@ class LoginPage extends React.Component {
   }
 
   render () {
-    console.log(this.props)
     return (
       <div className='login-page'>
         <header className='login-page-header'>
           <h1>Sign in</h1>
           <h2>Login, or click below to be redirected to create an account</h2>
+          <p>To demo, use username <strong>demo</strong>, and password <strong>demopassword</strong></p>
         </header>
         <section className='login-page-section'>
           <LoginForm 
