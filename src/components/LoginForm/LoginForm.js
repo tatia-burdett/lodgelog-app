@@ -2,6 +2,7 @@ import React from 'react'
 import AuthApiService from '../../services/auth-api-service'
 import AddressContext from '../../AddressContext'
 import './LoginForm.css'
+import TokenService from '../../services/token-service'
 
 class LoginForm extends React.Component {
   static defaultProps = {
@@ -22,8 +23,9 @@ class LoginForm extends React.Component {
       password: password.value
     })
       .then(res => {
-        this.context.setCurrentUser(res.id)
-        .username.value = ''
+        // this.context.setCurrentUser(res.id)
+        TokenService.saveUserId(res.id)
+        username.value = ''
         password.value = ''
         this.props.onLoginSuccess()
       })
