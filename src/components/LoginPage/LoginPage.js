@@ -14,11 +14,12 @@ class LoginPage extends React.Component {
 
   handleLogin = () => {
     const { location, history } = this.props
-    const destination = (location.state || {}).from || '/'
+    const destination = (location.state || '/dashboard')
     history.push(destination)
   }
 
   render () {
+    console.log(this.props)
     return (
       <div className='login-page'>
         <header className='login-page-header'>

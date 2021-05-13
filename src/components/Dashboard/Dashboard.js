@@ -19,7 +19,6 @@ class AddressLog extends React.Component {
   static contextType = AddressContext
 
   fetchUserAddresses = () => {
-    // const userId = this.context.currentUser
     const userId = TokenService.getUserId()
     fetch(`${config.API_ENDPOINT}/address/user/${userId}`, {
       headers: {
@@ -34,8 +33,6 @@ class AddressLog extends React.Component {
   }
 
   componentDidMount() {
-    console.log('mounted')
-    console.log(this.context.currentUser, 'state user')
     this.fetchUserAddresses()
   }
 
