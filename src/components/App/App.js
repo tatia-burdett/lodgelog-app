@@ -22,7 +22,6 @@ class App extends React.Component {
     super(props) 
     this.state = {
       address: [],
-      currentUser: [],
       error: null
     }
   }
@@ -42,14 +41,6 @@ class App extends React.Component {
 
   clearAddress = () => {
     this.setState({ address: [] })
-  }
-
-  setCurrentUser = currentUser => {
-    this.setState({ currentUser })
-  }
-
-  clearCurrentUser = () => {
-    this.setState({ currentUser: [] })
   }
 
   state = { hasError: false }
@@ -78,6 +69,7 @@ class App extends React.Component {
     TokenService.clearAuthToken()
     TokenService.clearCallbackBeforeExpiry()
     IdleService.unRegisterIdleResets()
+    TokenService.clearUserId()
     this.forceUpdate()
   }
 
@@ -116,14 +108,11 @@ class App extends React.Component {
   render () {
     const value = {
       address: this.state.address,
+      setAddress: this.setAddress,
+      clearAddress: this.clearAddress,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,
-      setAddress: this.setAddress,
-      setCurrentUser: this.setCurrentUser,
-      currentUser: this.state.currentUser,
-      clearCurrentUser: this.clearCurrentUser,
-      clearAddress: this.clearAddress,
     }
 
     return (

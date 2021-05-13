@@ -1,18 +1,16 @@
 import React from 'react'
 import config from '../../config'
-import AddressContext from '../../AddressContext'
+import TokenService from '../../services/token-service'
 import './AddAddressForm.css'
 
 class AddAddressForm extends React.Component {
-  static contextType = AddressContext
-
   state = { error: null }
 
   handleSubmit = (e) => {
     e.preventDefault()
     this.setState({ error: null })
     const { from_date, to_date, street_address, unit, city, abb_state, zipcode, current } = e.target
-    const userId = this.context.currentUser
+    const userId = TokenService.getUserId()
 
     const requestOptions = {
       method: 'POST',

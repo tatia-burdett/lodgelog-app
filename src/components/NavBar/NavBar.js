@@ -12,13 +12,13 @@ class NavBar extends React.Component {
     TokenService.clearAuthToken()
     TokenService.clearCallbackBeforeExpiry()
     IdleService.unRegisterIdleResets()
-    this.context.clearCurrentUser()
+    TokenService.clearUserId()
     this.context.clearAddress()
   }
 
   renderLogoutLink = () => {
     return (
-      <Link to='' onClick={this.handleLogout}>
+      <Link to='/' onClick={this.handleLogout}>
         Logout
       </Link>
     )
