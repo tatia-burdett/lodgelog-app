@@ -13,7 +13,7 @@ class SignUpForm extends React.Component {
     e.preventDefault()
     const { username, password } = e.target
 
-    this.setState({ error: null })
+    this.setState({ error: null }) // loading in state, if loading = display loading... 
     AuthApiService.postUser({
       username: username.value,
       password: password.value
@@ -26,6 +26,7 @@ class SignUpForm extends React.Component {
     .catch(res => {
       this.setState({ error: res.error })
     })
+    // .finally loading false in state
   }
 
   render() {
